@@ -15,6 +15,10 @@ class MajorCategoriesSeeder extends Seeder
      */
     public function run()
     {
+        $major_categories_ids = [
+            '1', '2', '3'
+        ];
+        
         $major_category_names = [
             '本', 'コンピュータ', 'ディスプレイ'
         ];
