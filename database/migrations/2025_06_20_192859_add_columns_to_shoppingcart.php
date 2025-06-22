@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('shoppingcart', function (Blueprint $table) {
             $table->string('code')->default("");
-            $table->integer('price_total')->unsigned()->defalut(0);
+            $table->integer('price_total')->unsigned()->default(0);
             $table->integer('qty')->unisigned()->default(0);
         });
     }

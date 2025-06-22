@@ -21,9 +21,11 @@
         <div class="row">
           <div class="col-12">
             <p class="samuraimart-product-label mt-2">
-              {{ $recommend_product->name }}<br>
-              <label>¥{{ $recommend_product->price }}</label>
-            </p>
+              {{ $recommend_product->name }}
+            </p><br>
+            <div class="samuraimart-star-rating" data-rate="{{ number_format($recommend_product->average_rating, 1, '.', '')}}">
+            </div>
+            <label>¥{{ $recommend_product->price }}</label>
           </div>
         </div>
       </div>
@@ -46,9 +48,9 @@
           <div class="row">
             <div class="col-12">
               <p class="samuraimart-product-label mt-2">
-                {{ $recently_product->name }}<br>
-                <label>¥{{ $recently_product->price }}</label>
-              </p>
+                {{ $recently_product->name }}</p><br>
+              <div class="samuraimart-star-rating" data-rate="{{ number_format($recommend_product->average_rating, 1, '.', '')}}"></div>
+              <label>¥{{ $recently_product->price }}</label>
             </div>
           </div>
         </div>

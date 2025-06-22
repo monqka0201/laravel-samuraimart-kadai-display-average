@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+    'carriage' => env('CARRIAGE', 800),
+    
     /*
     |--------------------------------------------------------------------------
     | Application Name

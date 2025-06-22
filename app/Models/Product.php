@@ -28,6 +28,16 @@ class Product extends Model
         return $this->hasMany(Review::class);
     }
 
+    public function getAverageRatingAttribute()
+    {
+        $avg = $this->reviews()->avg('score');
+        if($avg === null) {
+            return 0;
+        }
+
+        return round($avg * 2) / 2;
+    }
+
     public function favorite_uusers() {
         return $this->belongsToMany(User::class)->withTimestamps();
     }

@@ -185,3 +185,53 @@ label {
 th, td {
   background-color: #f8fafc !important;
 }
+
+.samuraimart-star-rating {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #0fbe9f;
+  line-height: 1.2rem;
+  height: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.samuraimart-star-rating::before,
+.samuraimart-star-rating::after {
+  content: "★★★★★";
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+.samuraimart-star-rating::before {
+  color: #ccc;
+  z-index: 1;
+}
+
+.samuraimart-star-rating::after {
+  color: #0fbe9f;
+  overflow: hidden;
+  z-index: 2;
+  width: 0%;
+}
+
+.samuraimart-star-rating[data-rate="0"]::after {width: 0%; }
+.samuraimart-star-rating[data-rate="0.5"]::after {width: 10%; }
+.samuraimart-star-rating[data-rate="1"]::after {width: 20%; }
+.samuraimart-star-rating[data-rate="1.5"]::after {width: 30%; }
+.samuraimart-star-rating[data-rate="2"]::after {width: 40%; }
+.samuraimart-star-rating[data-rate="2.5"]::after {width: 50%; }
+.samuraimart-star-rating[data-rate="3"]::after {width: 60%; }
+.samuraimart-star-rating[data-rate="3.5"]::after {width: 70%; }
+.samuraimart-star-rating[data-rate="4"]::after {width: 80%; }
+.samuraimart-star-rating[data-rate="4.5"]::after {width: 90%; }
+.samuraimart-star-rating[data-rate="5"]::after {width: 100%; }
+
+.samuraimart-product-label {
+  margin-bottom: 1rem;
+}
+

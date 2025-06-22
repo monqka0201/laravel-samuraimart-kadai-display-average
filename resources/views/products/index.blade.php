@@ -36,9 +36,8 @@
           <div class="row">
             <div class="col-12">
               <p class="samuraimart-product-label mt-2">
-                {{$product->name}}<br>
-                <label>¥{{$product->price}}</label>
-              </p>
+                {{$product->name}}<br></p>
+              <label>¥{{$product->price}}</label>
             </div>
           </div>
         </div>
