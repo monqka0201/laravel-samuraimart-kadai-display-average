@@ -31,10 +31,18 @@ class CsvImport extends AbstractTool
         success: function(response) {
           $.pjax.reload("#pjax-container");
           toastr.success('CSVのアップロードが成功しました');
-        }
+        },
+          error: function(xhr, status, error) {
+           console.error(xhr.responseText);
+          toastr.error('CSVのアップロードに失敗しました');
+          }
       });
+
+      
     });
     });
+
+    
 
     SCRIPT;
     }
