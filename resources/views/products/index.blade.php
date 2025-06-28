@@ -37,6 +37,11 @@
             <div class="col-12">
               <p class="samuraimart-product-label mt-2">
                 {{$product->name}}<br></p>
+                @php
+                  $averageScoreProduct = $product->reviews()->exists() ? round($product->reviews->avg('score') * 2) / 2 :0;
+                @endphp
+                <span class="samuraimart-star-rating" data-rate="{{ $averageScoreProduct }}"></span>
+                {{ $averageScoreProduct }}<br>
               <label>¥{{$product->price}}</label>
             </div>
           </div>
