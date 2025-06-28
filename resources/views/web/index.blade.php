@@ -53,7 +53,7 @@
               <p class="samuraimart-product-label mt-2">
                 {{ $recently_product->name }}</p><br>
               @php
-                $averageScore = $recently_product->reviews()->exists() ? rount($recently_product->reviews->avg('score') *2) / 2 :0;
+                $averageScore = $recently_product->reviews()->exists() ? round($recently_product->reviews->avg('score') *2) / 2 :0;
               @endphp
               <span class="samuraimart-star-rating" data-rate="{{ $averageScore }}"></span>
               {{ $averageScore }}<br>
